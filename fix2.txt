@@ -1,0 +1,47 @@
+1. git init
+   git branch -M main
+2. Set-Content README.md "duck`nmoose`ncat"
+   Get-Content README.md
+3. git status -> git add .
+   git commit -m "Initial commit"
+   git log
+4. git checkout -b feature1
+   git branch
+5. Add-Content README.md "dog"
+   (Get-Content README.md) -replace 'moose', 'mouse' | Set-Content README.md
+   Get-Content README.md
+   git add README.md
+   git commit -m "Add dog to README.md and replace moose with mouse"
+6. git checkout main
+   (Get-Content README.md) -replace 'moose', 'mahmut' | Set-Content README.md
+   git add README.md
+   git commit -m "Replace moose with mahmut"
+   git log
+7. git branch
+   git merge feature1
+   git add README.md
+   git commit
+8. git log --oneline
+   git tag extinct
+   git tag
+9. git reset --hard HEAD~1
+10. git branch feature2
+    git branch
+11. sed -i 's/\b\(.\)/\u\1/g' README.md
+    git add README.md
+    git commit -m "Make animals start with Uppercase"
+    git log --oneline
+12. git checkout feature2
+    touch fix1.txt
+    git add fix1.txt
+    git commit -m "Add fix1.txt"
+    touch fix2.txt
+    git add fix2.txt
+    git commit -m "Add fix2.txt"
+13. git checkout main
+    ls
+    git log --oneline
+14. git log feature2 --oneline
+    git cherry-pick 34e52f3
+    ls
+15. nano fix2.txt

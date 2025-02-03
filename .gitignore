@@ -3,7 +3,7 @@
 
 # Ignorera alla filer i out och target
 out/
-target/
+target/*
 
 # Tillåt .html-filern i target
 !target/*.html
